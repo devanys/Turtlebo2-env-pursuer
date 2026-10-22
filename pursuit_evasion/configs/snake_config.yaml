@@ -1,0 +1,47 @@
+# ============================================================
+# Snake Pursuit-Evasion Config (Phase 1: No HJB)
+# ============================================================
+
+simulation:
+  mode: gui
+  timestep: 0.004
+  control_freq: 10
+  max_episode_time: 500.0
+
+arena:
+  size: [20.0, 20.0]         # UBAH: dari 12 → 20 (lebih luas)
+  wall_height: 1.0
+  num_obstacles: 0
+  obstacle_min_size: 0.5
+  obstacle_max_size: 1.5
+
+robots:
+  urdf_path: "C:/Users/Devan/Downloads/pybullet_robots-master/pybullet_robots-master/data/turtlebot.urdf"
+  num_pursuers: 1
+  num_evaders: 9
+  spawn_radius: 5.0
+  spawn_clearance: 1.5
+
+robot_params:
+  wheel_radius: 0.033
+  wall_separation: 0.23
+  max_linear_vel: 1.5
+  max_angular_vel: 2.5
+  wheel_force: 20.0
+
+lidar:
+  num_rays: 180
+  range_max: 5.0
+  ray_height: 0.1
+
+game:
+  capture_radius: 1.0
+  detection_radius: 1.5
+  evader_caught_reward: 1.0
+
+snake:
+  formation_spacing: 1.0
+
+viz:
+  god_view: true
+  record_video: false

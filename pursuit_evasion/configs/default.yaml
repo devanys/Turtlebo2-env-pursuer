@@ -1,0 +1,48 @@
+# ============================================================
+# Pursuit-Evasion Demo Config (SIMPLE VERSION)
+# ============================================================
+
+simulation:
+  mode: gui
+  timestep: 0.004
+  control_freq: 10
+  max_episode_time: 60.0
+
+arena:
+  size: [12.0, 12.0]       # arena lebih kecil = cepat ketemu
+  wall_height: 1.0
+  num_obstacles: 0          # TANPA obstacle = pasti lancar
+  obstacle_min_size: 0.5
+  obstacle_max_size: 1.5
+
+robots:
+  urdf_path: "C:/Users/Devan/Downloads/pybullet_robots-master/pybullet_robots-master/data/turtlebot.urdf"
+  num_pursuers: 7
+  num_evaders: 3
+  spawn_radius: 5.0
+  spawn_clearance: 1.0
+
+robot_params:
+  wheel_radius: 0.033
+  wheel_separation: 0.23
+  max_linear_vel: 1.5
+  max_angular_vel: 2.5
+  wheel_force: 20.0
+
+lidar:
+  num_rays: 180
+  range_max: 5.0
+  ray_height: 0.1
+
+game:
+  capture_radius: 0.7       # dari 0.4 → 0.7 (account for robot size)
+  evader_flee_radius: 5.0
+  pursuer_detect_radius: 5.0
+  communication_range: 10.0
+  evader_caught_reward: 1.0
+  pursuer_collision_penalty: -0.1
+
+viz:
+  god_view: true
+  record_video: false
+  log_metrics: true

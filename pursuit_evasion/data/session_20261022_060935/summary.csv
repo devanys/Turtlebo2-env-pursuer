@@ -1,0 +1,2 @@
+run,seed,duration_s,steps,final_capture_length,total_captures,remaining,winner,mean_interval_s,std_interval_s,min_interval_s,max_interval_s,pb_video,gv_video,paper_png
+1,42,229.90,2299,10,9,0,HEAD,28.40,29.31,2.10,86.80,run_01_pybullet.mp4,run_01_godview.mp4,run_01_paper.png
